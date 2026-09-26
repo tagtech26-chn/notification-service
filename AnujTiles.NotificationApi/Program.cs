@@ -1,8 +1,10 @@
 using AnujTiles.NotificationApi.Middleware;
 using AnujTiles.NotificationEngine;
+using AnujTiles.NotificationEngine.Configuration;
+using AnujTiles.NotificationEngine.Models;
+using AnujTiles.NotificationEngine.Services;
+using AnujTiles.NotificationEngine.Templates;
 using Microsoft.AspNetCore.OpenApi;
-
-var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 builder.Services.AddAnujTilesNotifications(builder.Configuration);
