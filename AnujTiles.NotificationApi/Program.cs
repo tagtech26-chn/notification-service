@@ -6,8 +6,11 @@ using AnujTiles.NotificationEngine.Services;
 using AnujTiles.NotificationEngine.Templates;
 using Microsoft.AspNetCore.OpenApi;
 
+var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddOpenApi();
 builder.Services.AddAnujTilesNotifications(builder.Configuration);
+builder.Services.AddSingleton<NotificationOptionsAccessor>();
 
 var app = builder.Build();
 
